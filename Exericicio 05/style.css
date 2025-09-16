@@ -2,9 +2,16 @@
 background-color: rgb(230, 156, 195);
  margin: 0;
   padding: 0;
-
+  text-align: center;
 }
 
+.cad{
+    text-align: center;
+}
+
+.log{
+    text-align: center;
+}
 .formulario{
     background-color: rgb(225, 15, 137);
     width: 400px;
@@ -32,3 +39,22 @@ background-color: rgb(230, 156, 195);
     /* Aplicando sombra no texto posição x, y blur */
     text-shadow: 5px 2px 5px rgba(242, 34, 145, 0.9);
 }
+
+
+
+
+.sexo{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f097d7;
+    border-radius: 50%;
+
+}
+/* Pseudoclasse, quando o estado do objeto mudar ele atribui outras propriedades */
+.sexo:checked{
+    background-color: #f35fa4;
+    border-color: #f097d7;
+    
+}
+
