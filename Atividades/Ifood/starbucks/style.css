@@ -1,0 +1,140 @@
+:root{
+     --cor-verde-sturbucks: #046d3c;
+    --cor-preto-texto: #181515;
+    --cor-cinza-borda: #e2e2e2;
+    --cor-fundo: #f7f7f7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* Apliquei em todo o documento fonte, cor e cor fundo */
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color:black;
+}
+.cabecalho{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--cor-cinza-borda);
+}
+.logo{
+    height: 8vh;
+    
+}
+
+.menu-direita{
+    display:flex;
+}
+
+.menu-esquerda{
+    display: flex;
+    align-items: center;
+}
+.container{
+    /* Propriedade define a largura maxima que ele pode atingir */
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.navegacao{
+    display: flex;
+    gap: 19px;
+}
+
+.item{
+    /* Remover decoração da tag a */
+    text-decoration: none;
+    color: black;
+    /* Aplicando negrito */
+    font-weight: 600;
+    padding: 8px 0;
+    border-bottom: 3px solid transparent;
+}
+
+.item:focus, 
+.item:hover{
+    color: var(--cor-verde-ifood);
+    border-bottom-color: var(--cor-verde-ifood) ;
+}
+.buscar{
+    padding: 10px;
+    border: 1px solid var(--cor-cinza-texto);
+    border-radius: 8px;
+    width: 9rem; 
+}
+
+.localizacao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+   
+}
+
+.texto-local{
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.acao{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.criar-conta{
+    background-color: var(--cor-fundo);
+    color:var(--cor-preto-texto);
+    border: 14;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botao-entrar{
+    background-color: var(--cor-preto-texto);
+    color:var(--cor-fundo);
+    border: 14;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.entrar{
+    background-color: var(--cor-verde-ifood);
+    color:var(--cor-fundo);
+    border: none;
+    padding: 10px, 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.logos{
+    height: 3vh;
+}
+
+.encontrar{
+    text-decoration: none;
+    color: var(--cor-preto-texto);
+    font-weight: 600;
+    align-items: center;
+    display: flex;
+    gap: 20px
+    
+}
+
