@@ -93,3 +93,32 @@ body{
     font-weight: 600;
     cursor: pointer;
 }
+
+.almoco{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.foto{
+ height: 60px;
+}
+ .card-produto{
+    display: flex;
+    flex-direction: column;
+    width: 13vw;
+    align-items: center;
+    transition: transform 0.2s ease;
+    margin-top: 6rem;
+    margin-left: 5rem;
+ }
+
+.card-produto:hover{transform: translateY(-5px) ;
+}
+
+.coluna{
+    display:flex;
+    flex-direction: row;
+   
+}
+
