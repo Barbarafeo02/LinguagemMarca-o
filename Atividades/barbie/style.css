@@ -1,0 +1,140 @@
+:root {
+  --cor-rosa-barbie: #FF33B5;
+  --cor-cinza-medio: #aaaaaa;
+  --cor-cinza-fundo: #f6f6f6;
+  --cor-branco: #ffffff;
+  --cor-preto: #000000;
+  --cor-borda: #e0e0e0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cor-branco);
+  color: var(--cor-preto);
+}
+
+.top-header {
+  background-color: var(--cor-branco);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--cor-borda);
+  font-size: 0.85rem;
+}
+
+.brands-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brand-logo {
+  height: 24px;
+}
+
+.idioma img {
+  height: 16px;
+  margin-right: 4px;
+}
+
+.cabecalho {
+  background-color: var(--cor-rosa-barbie);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 40px;
+}
+
+.navegacao {
+  display: flex;
+  gap: 20px;
+}
+
+.item {
+  color: var(--cor-branco);
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.busca {
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-branco);
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.busca input {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.busca button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.busca img {
+  height: 18px;
+}
+
+.destaques {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.destaques img {
+  width: 100%;
+  max-width: 640px;
+}
+
+.filtros {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.filtros h1 {
+  font-size: 2rem;
+  color: var(--cor-preto);
+  margin-bottom: 20px;
+}
+
+.botoes-filtro {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.botao-rosa {
+  background-color: var(--cor-rosa-barbie);
+  color: var(--cor-branco);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.botao-rosa:hover {
+  background-color: #e029a2;
+}
+

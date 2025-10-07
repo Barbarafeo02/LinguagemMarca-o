@@ -161,13 +161,23 @@ body{
  }
 
  .saiba-mais{
+    display: flex;
+     justify-content:center;
     text-decoration: none;
-    border: 1 px solid black;
-    color: black;
-    padding: 0.5rem;
+    border: 1px solid green;
+    color: green;
+    padding: 0.5rem 1rem;
     border-radius: 25px;
-
+    margin-left: auto;
+    width: fit-content;
+    font-weight: bold;
+  transition: 0.3s ease;
  }
+ .saiba-mais:hover {
+  background-color: green;
+  color: white;
+}
+
  
  .banner-tres{
     display: flex;
@@ -183,4 +193,30 @@ body{
     justify-content:center;
     align-items: center;
     background-color: rgb(212, 233, 226);
+}
+
+.rodape-principal{
+    background-color: #575757;
+    color: #fff;
+    padding: 70px ;
+        display: flex;
+    justify-content: space-between;
+}
+
+.rodape-principal .container{
+    display: flex;
+    gap: 70px;
+    margin-left: 140px;
+}
+.coluna-rodape{
+    display: flex;
+    flex-direction: column;
+}
+.coluna-rodape {flex: 1;}
+.coluna-rodape h3{margin-bottom: 20px;}
+.coluna-rodape ul{list-style: none;}
+.coluna-rodape ul li{margin-bottom: 10px;}
+.coluna-rodape a {text-decoration: none; color: #e2e2e2; transition: color 0.2s ease;}
+.coluna-rodape a:hover{color: var(--cor-verde-sturbucks);}
+.icones-socias a{margin-right: 15px; font-size: 20px; padding: 20px; gap: 50px;
 }
