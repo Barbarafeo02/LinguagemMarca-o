@@ -1,0 +1,296 @@
+/* PALETA DE CORES BACIO DI LATTE */
+:root {
+    --cor-marrom-texto: #402f26; /* Cor do logo e texto principal */
+    --cor-marrom-destaque: #8d4f24; /* Cor de destaque (ícones) */
+    --cor-rosa-claro: #f17b6c; /* Tom final do degradê do botão Entrar */
+    --cor-laranja-claro: #f3966a; /* Tom inicial do degradê do botão Entrar */
+    --cor-fundo-acao: #f5f5f5; /* Cinza claro/bege de fundo da barra de endereço */
+    --cor-borda: #e0e0e0;
+}
+
+/* ⚠️ Ajuste de Fonte: Usaremos Poppins para a maioria dos textos 
+   e 'Roboto Slab' (ou outra serifa limpa) para a navegação, replicando o estilo elegante. */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    color: var(--cor-marrom-texto);
+}
+
+/* ======================================= */
+/* 1. CABEÇALHO SUPERIOR (LOGO E NAV) */
+/* ======================================= */
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px; /* Reduzido padding verticalmente */
+    background-color: white;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* LOGO */
+.logo-container {
+    /* Mantido flex: 1 para alinhar à esquerda */
+    flex: 1;
+}
+
+.logo {
+    width: 180px; /* Reduzido o tamanho para ficar mais fiel à imagem */
+    /* A logo real é texto estilizado, mas ajustamos o tamanho da imagem */
+}
+
+/* NAVEGAÇÃO TOPO */
+.navegacao-topo {
+    display: flex;
+    gap: 30px; /* Aumentado o gap para espaçar mais */
+    /* Não precisa de flex: 2; nem justify-content: center.
+       Deixar a navegação fluir e o space-between fará o resto. */
+}
+
+.navegacao-topo .item {
+    text-decoration: none;
+    color: var(--cor-marrom-texto);
+    /* Usaremos a fonte Poppins com peso médio para os links */
+    font-weight: 500; 
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navegacao-topo .item:hover {
+    color: var(--cor-marrom-destaque);
+}
+
+/* ======================================= */
+/* 2. BARRA DE AÇÕES (ABAIXO DO CABEÇALHO) */
+/* ======================================= */
+
+.barra-acoes {
+    display: flex;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 40px;
+}
+
+/* SELETOR ENTREGAR / RETIRAR NA LOJA */
+.seletor-entrega {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    font-weight: 500;
+}
+
+.entrega-item {
+    padding: 5px 15px;
+    cursor: pointer;
+    color: #8d8d8d; /* Cor cinza padrão */
+}
+
+.entrega-item.ativo {
+    color: var(--cor-marrom-texto);
+    font-weight: 600;
+    border-bottom: 3px solid var(--cor-marrom-destaque);
+}
+
+/* CONTAINER DE ENDEREÇO E BOTÕES */
+.container-endereco {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1; /* Permite que ocupe o espaço restante */
+}
+
+.input-endereco {
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-fundo-acao);
+    border-radius: 6px;
+    padding: 10px 15px;
+    flex-grow: 1; /* Permite que ocupe a maior parte do espaço */
+    max-width: 600px;
+    color: var(--cor-marrom-texto);
+    cursor: pointer;
+}
+
+.icone-localizacao {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: var(--cor-marrom-destaque);
+}
+
+.texto-endereco {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    font-size: 0.85rem;
+}
+
+.texto-endereco .label {
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.texto-endereco .valor {
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.icone-seta {
+    margin-left: 10px;
+    color: #aaa;
+    font-weight: 700;
+}
+
+.trocar-loja {
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-fundo-acao);
+    border-radius: 6px;
+    padding: 10px 15px;
+    color: var(--cor-marrom-texto);
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.icone-sacola {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+/* BOTÃO ENTRAR */
+.botao-entrar {
+    background: linear-gradient(to right, var(--cor-laranja-claro), var(--cor-rosa-claro));
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.botao-entrar:hover {
+    opacity: 0.9;
+}
+
+/* ÍCONES MENU E CARRINHO */
+.menu-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+    color: var(--cor-marrom-texto);
+}
+
+.icone-menu, .icone-carrinho {
+    width: 24px;
+    height: 24px;
+    /* Para ícones de imagem, certifique-se que as imagens têm a cor marrom correta */
+}
+
+/* ======================================= */
+/* 3. BANNER PRINCIPAL */
+/* ======================================= */
+
+.banner-principal {
+
+    background-color: #f7f3e8; 
+    padding: 20px 0; /* Espaçamento para o banner não colar no topo/fundo */
+    overflow: hidden; /* Garante que elementos grandes não causem barra de rolagem */
+}
+
+.banner-conteudo {
+    max-width: 1400px; 
+    height: 400px; 
+    margin: 0 auto;
+    
+    
+    background-image: url('../img/vanillacaramel.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão para a direita */
+    align-items: flex-end; /* Alinha o botão para baixo */
+    padding: 30px;
+    position: relative;
+    border-radius: 8px; 
+}
+
+.botao-banner {
+    background: linear-gradient(to right, var(--cor-laranja-claro), var(--cor-rosa-claro));
+    color: var(--cor-marrom-texto); 
+    border: 2px solid var(--cor-marrom-texto); 
+    padding: 10px 25px;
+    border-radius: 20px; /* Bordas arredondadas do botão */
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    position: absolute; 
+    right: 50px;
+    bottom: 50px;
+    background-color: #f5f5e6; 
+    border: 1px solid #c7c7a7;
+    color: var(--cor-marrom-texto);
+}
+
+.secao-beneficios {
+    background-color: var(--cor-fundo-acao); 
+    padding: 40px 0;
+}
+
+.container-beneficios {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card-beneficio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor-branco); /* Fundo branco para cada card */
+    border-radius: 8px;
+    flex: 1; /* Ocupa espaço igual */
+    border: 1px solid var(--cor-borda);
+    min-height: 200px; /* Garante que os cards tenham altura mínima */
+}
+
+.card-icone img {
+    width: 50px; /* Tamanho do ícone */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card-titulo {
+    color: var(--cor-marrom-texto);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.card-descricao {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.propaganda{
+    align-items: center;
+    flex-direction:row;
+}

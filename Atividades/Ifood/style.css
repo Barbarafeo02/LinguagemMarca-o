@@ -20,6 +20,9 @@ body{
     background-color: #fff;
     padding: 15px 0;
     border-bottom: 1px solid var(--cor-cinza-borda);
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 .logo{
     height: 5vh;
@@ -93,9 +96,6 @@ body{
     cursor: pointer;
 }
 
-
-
-
 .foto{
  height: 150px;
 }
@@ -108,6 +108,8 @@ body{
  height: 175px;
 }
  .card-produto{
+    width: 300;
+    height: 360;
     display: flex;
     flex-direction: column;
     width: 13vw;
@@ -230,4 +232,115 @@ body{
 .coluna-rodape a {text-decoration: none; color: #e2e2e2; transition: color 0.2s ease;}
 .coluna-rodape a:hover{color: var(--cor-vermelho-ifood);}
 .icones-socias a{margin-right: 15px; font-size: 20px; padding: 20px; gap: 50px;
+}
+
+.modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    /* centralizar nosso box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* começar escondido */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3 s ease;
+}
+
+.modal-cadastro:target{
+opacity: 1;
+visibility: visible;
+}
+
+.modal-box{
+    background-color: #fff;
+    padding:30px 40 px;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+
+}
+
+.modal-cadastro{
+    transform: scale(1);
+}
+
+.modal-cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom: 25px;
+}
+
+.modal-cabecalho h2{
+    font-size: 2rem;
+    color: #333;
+
+}
+
+.fechar{
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--cor-cinza-texto);
+    font-weight: 300;
+}
+
+.formulario .grupo-form{
+    margin-bottom: 20px;
+}
+
+
+
+.formulario-label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+
+}
+
+.formulario input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-cinza-texto);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+}
+
+.formulario input:focus{
+    outline: none;
+    border-color: var(--cor-vermelho-ifood);
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+}
+
+.formulario .botao-criar{
+width: 100%;
+padding: 15px;
+font-size: 0.8rem;
+margin-top: 10px;
+background-color: var(--cor-vermelho-ifood);
+color: #fff;
+border-radius: 8px;
+font-weight: 600;
+}
+
+.modal-rodape{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.modal-rodape a{
+    color: var(--cor-vermelho-ifood);
+    font-weight: 600;
+    text-decoration: none;
 }
